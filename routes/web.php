@@ -22,3 +22,7 @@ $router->get('/', function () use ($router) {
 // $router->get('/key', function() use ($router){
 //     return \Illuminate\Support\Str::random(32);
 // });
+
+$router->post('http://isleep.innobyte.pe/api/v1/device/sync/store', [
+    'as' => 'device', 'uses' => 'DeviceController@index'
+]);
